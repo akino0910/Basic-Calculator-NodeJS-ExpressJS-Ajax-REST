@@ -1,2 +1,61 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+
+<div class="container">
+	<div class="header">
+		<h1>{{title}}</h1>
+	</div>
+	<div class="body">
+		<table border="0" cellpadding="3">
+			<tbody>
+			<form id="calculator" method="post">
+				<tr>
+					<td width="75rem">Số thứ nhất</td>
+					<td width="100rem">
+						<input type="text" name="soThuNhat" id="soThuNhat" form="calculator" value="{{soThuNhat}}">
+					</td>
+					<td width="50rem">
+						<label>
+							<input type="radio" name="toanTu" id="add" value="+">Cộng
+						</label>
+					</td>
+					<td width="50rem">
+						<label>
+							<input type="radio" name="toanTu" id="sub" value="-">Trừ
+						</label>
+					</td>
+				</tr>
+				<tr>
+					<td>Số thứ hai</td>
+					<td>
+						<input type="text" name="soThuHai" id="soThuHai" form="calculator" value="{{soThuHai}}">
+					</td>
+					<td>
+						<label>
+							<input type="radio" name="toanTu" id="mul" value="*">Nhân
+						</label>
+					</td>
+					<td>
+						<label>
+							<input type="radio" name="toanTu" id="div" value="/">Chia
+						</label>
+					</td>
+				</tr>
+			</form>
+			<tr>
+				<td>Kết quả</td>
+				<td><input type="text" name="ketQua" id="ketQua" value="{{ketQua}}"></td>
+				<td>
+					<button id="tinhToan" type="submit" form="calculator">Tính</button>
+				</td>
+			</tr>
+			<tr>
+				<td>Thông báo</td>
+				<td colspan="3">
+					<div style="color: red" id="msgError">{{msgError}}</div>
+				</td>
+			</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+<script src="/javascripts/xuLy.js"></script>

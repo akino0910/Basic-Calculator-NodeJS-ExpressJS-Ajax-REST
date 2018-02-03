@@ -6,3 +6,15 @@ body {
 a {
   color: #00B7FF;
 }
+
+td>input {
+    margin: 0;
+    height: 100% !important;
+    display: inline-block;
+    width: 100%;
+    border-radius: 0 !important;
+}
+
+td>div {
+    word-break:break-all;
+}
