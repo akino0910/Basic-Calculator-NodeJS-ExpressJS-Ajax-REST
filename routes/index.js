@@ -20,7 +20,7 @@ router.post('/', function (req, res, next) {
 	const soThuHai = req.body.soThuHai;
 	const toanTu = req.body.toanTu;
 
-	var calculator = new Calculator(soThuNhat, soThuHai, toanTu);
+	var calculator = new Calculator(Number(soThuNhat), Number(soThuHai), toanTu);
 	var kq = calculator.tinhKetQua();
 
 	var msgError = catchError.kiemTraLoi(soThuNhat, soThuHai, toanTu);

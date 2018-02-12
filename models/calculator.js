@@ -1,6 +1,6 @@
 function tinhToan(soThuNhat, soThuHai, toanTu) {
-	this.soThuNhat = Number(soThuNhat);
-	this.soThuHai = Number(soThuHai);
+	this.soThuNhat = soThuNhat;
+	this.soThuHai = soThuHai;
 	this.toanTu = toanTu;
 
 	this.tinhKetQua = function () {

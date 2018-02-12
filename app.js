@@ -11,8 +11,10 @@ var index = require('./routes/index');
 
 var app = express();
 
-hbs.registerHelper('ifRadio', (arg1, arg2, options) => {
-	return (arg1 == arg2) ? options.fn(this) : options.inverse(this);
+hbs.registerHelper('ifRadio', (arg1, arg2) => {
+	if (arg1 == arg2) {
+		return "checked"
+	}
 });
 
 // view engine setup
