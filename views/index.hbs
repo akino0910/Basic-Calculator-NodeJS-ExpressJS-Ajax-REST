@@ -14,12 +14,12 @@
 					</td>
 					<td width="50rem">
 						<label>
-							<input type="radio" name="toanTu" id="add" value="+">Cộng
+							<input type="radio" name="toanTu" id="add" value="+" {{#ifRadio toanTu '+'}}checked{{/ifRadio}}>Cộng
 						</label>
 					</td>
 					<td width="50rem">
 						<label>
-							<input type="radio" name="toanTu" id="sub" value="-">Trừ
+							<input type="radio" name="toanTu" id="sub" value="-" {{#ifRadio toanTu '-'}}checked{{/ifRadio}}>Trừ
 						</label>
 					</td>
 				</tr>
@@ -30,12 +30,12 @@
 					</td>
 					<td>
 						<label>
-							<input type="radio" name="toanTu" id="mul" value="*">Nhân
+							<input type="radio" name="toanTu" id="mul" value="*" {{#ifRadio toanTu '*'}}checked{{/ifRadio}}>Nhân
 						</label>
 					</td>
 					<td>
 						<label>
-							<input type="radio" name="toanTu" id="div" value="/">Chia
+							<input type="radio" name="toanTu" id="div" value="/" {{#ifRadio toanTu '/'}}checked{{/ifRadio}}>Chia
 						</label>
 					</td>
 				</tr>
@@ -44,7 +44,7 @@
 				<td>Kết quả</td>
 				<td><input type="text" name="ketQua" id="ketQua" value="{{ketQua}}"></td>
 				<td>
-					<button id="tinhToan" type="submit" form="calculator">Tính</button>
+					<button id="btnTinh" type="button">Tính</button>
 				</td>
 			</tr>
 			<tr>

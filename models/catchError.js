@@ -1,9 +1,4 @@
-var Handlebars = require('hbs');
 exports.kiemTraLoi = function(soThuNhat, soThuHai, toanTu) {
-	Handlebars.registerHelper("checked", function (value, currentValue) {
-		if (value == undefined) return '';
-		return value==currentValue ? 'checked' : '';
-	});
 	var msgError = '';
 
 	if (soThuNhat.length === 0 && soThuHai.length === 0) {
