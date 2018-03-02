@@ -6,36 +6,36 @@
 	<div class="body">
 		<table border="0" cellpadding="3">
 			<tbody>
-			<form id="calculator" method="post">
+			<form id="calculator" method="get">
 				<tr>
 					<td width="75rem">Số thứ nhất</td>
 					<td width="100rem">
-						<input type="text" name="soThuNhat" id="soThuNhat" form="calculator" value="{{soThuNhat}}">
+						<input type="text" name="x" id="soThuNhat" form="calculator" value="{{soThuNhat}}">
 					</td>
 					<td width="50rem">
 						<label>
-							<input type="radio" name="toanTu" id="add" value="+" {{ifRadio toanTu '+'}}>Cộng
+							<input type="radio" name="pheptinh" id="add" value="+" {{ifRadio pheptinh '+'}}>Cộng
 						</label>
 					</td>
 					<td width="50rem">
 						<label>
-							<input type="radio" name="toanTu" id="sub" value="-" {{ifRadio toanTu '-'}}>Trừ
+							<input type="radio" name="pheptinh" id="sub" value="-" {{ifRadio pheptinh '-'}}>Trừ
 						</label>
 					</td>
 				</tr>
 				<tr>
 					<td>Số thứ hai</td>
 					<td>
-						<input type="text" name="soThuHai" id="soThuHai" form="calculator" value="{{soThuHai}}">
+						<input type="text" name="y" id="soThuHai" form="calculator" value="{{soThuHai}}">
 					</td>
 					<td>
 						<label>
-							<input type="radio" name="toanTu" id="mul" value="*" {{ifRadio toanTu '*'}}>Nhân
+							<input type="radio" name="pheptinh" id="mul" value="*" {{ifRadio pheptinh '*'}}>Nhân
 						</label>
 					</td>
 					<td>
 						<label>
-							<input type="radio" name="toanTu" id="div" value="/" {{ifRadio toanTu '/'}}>Chia
+							<input type="radio" name="pheptinh" id="div" value="/" {{ifRadio pheptinh '/'}}>Chia
 						</label>
 					</td>
 				</tr>
