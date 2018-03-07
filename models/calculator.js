@@ -1,29 +1,31 @@
-function tinhToan(soThuNhat, soThuHai, toanTu) {
-	this.soThuNhat = soThuNhat;
-	this.soThuHai = soThuHai;
-	this.toanTu = toanTu;
+'use strict';
 
-	this.tinhKetQua = function () {
-		var ketQua = 0;
-		switch (this.toanTu) {
+function calculator(num1, num2, operator) {
+	this.num1 = num1;
+	this.num2 = num2;
+	this.operator = operator;
+
+	this.calculate = () => {
+		var result = 0;
+		switch (this.operator) {
 			case '+':
-				ketQua = soThuNhat + soThuHai;
+				result = num1 + num2;
 				break;
 			case '-':
-				ketQua = soThuNhat - soThuHai;
+				result = num1 - num2;
 				break;
 			case '*':
-				ketQua = soThuNhat * soThuHai;
+				result = num1 * num2;
 				break;
 			case '/':
-				ketQua = soThuNhat / soThuHai;
+				result = num1 / num2;
 				break;
 		}
-		if (isNaN(ketQua)) {
-			ketQua = 0;
+		if (isNaN(result)) {
+			result = 0;
 		}
-		return ketQua;
+		return result;
 	}
-}
+};
 
-module.exports = tinhToan;
+module.exports = calculator;

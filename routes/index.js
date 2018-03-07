@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
-	res.render('index', {title: 'Bé tập tính'});
+	res.render('index', {title: 'Basic Calculator (REST API + Ajax)'});
 });
 
 module.exports = router;

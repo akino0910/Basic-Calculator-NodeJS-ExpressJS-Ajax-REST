@@ -3,12 +3,15 @@ const router = express.Router();
 const Calculator = require('../../models/calculator');
 
 router.get('/', function (req, res, next) {
-	const soThuNhat = req.query.x;
-	const soThuHai = req.query.y;
-	const pheptinh = req.query.pheptinh;
+	const num1 = req.query.x;
+	const num2 = req.query.y;
+	const operator = req.query.operator;
 
-	var calculator = new Calculator(Number(soThuNhat), Number(soThuHai), pheptinh);
-	var kq = calculator.tinhKetQua();
+	console.log(num1 + '\t' + num2 + '\t' + operator);
+
+	var calculator = new Calculator(Number(num1), Number(num2), operator);
+
+	var kq = calculator.calculate();
 
 	var rs = {};
 

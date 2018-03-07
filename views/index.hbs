@@ -8,54 +8,52 @@
 			<tbody>
 			<form id="calculator" method="get">
 				<tr>
-					<td width="75rem">Số thứ nhất</td>
+					<td width="75rem">Number 1</td>
 					<td width="100rem">
-						<input type="text" name="x" id="soThuNhat" form="calculator" value="{{soThuNhat}}">
+						<input type="text" name="x" id="num1" form="calculator">
 					</td>
-					<td width="50rem">
+					<td width="80rem">
 						<label>
-							<input type="radio" name="pheptinh" id="add" value="+" {{ifRadio pheptinh '+'}}>Cộng
+							<input type="radio" name="operator" id="add" value="+">Adddition
 						</label>
 					</td>
-					<td width="50rem">
+					<td width="80rem">
 						<label>
-							<input type="radio" name="pheptinh" id="sub" value="-" {{ifRadio pheptinh '-'}}>Trừ
+							<input type="radio" name="operator" id="sub" value="-">Subtraction
 						</label>
 					</td>
 				</tr>
 				<tr>
-					<td>Số thứ hai</td>
+					<td>Number 2</td>
 					<td>
-						<input type="text" name="y" id="soThuHai" form="calculator" value="{{soThuHai}}">
+						<input type="text" name="y" id="num2" form="calculator">
 					</td>
 					<td>
 						<label>
-							<input type="radio" name="pheptinh" id="mul" value="*" {{ifRadio pheptinh '*'}}>Nhân
+							<input type="radio" name="operator" id="mul" value="*">Multiplication
 						</label>
 					</td>
 					<td>
 						<label>
-							<input type="radio" name="pheptinh" id="div" value="/" {{ifRadio pheptinh '/'}}>Chia
+							<input type="radio" name="operator" id="div" value="/">Division
 						</label>
 					</td>
 				</tr>
 			</form>
 			<tr>
-				<td>Kết quả</td>
-				<td><input type="text" name="ketQua" id="ketQua" value="{{ketQua}}"></td>
+				<td>Result</td>
+				<td><input type="text" name="result" id="result" disabled></td>
 				<td>
-					<button id="btnTinh" type="button">Tính</button>
+					<button id="btnCal" type="button">Calculate!</button>
 				</td>
 			</tr>
 			<tr>
-				<td>Thông báo</td>
+				<td>Error</td>
 				<td colspan="3">
-					<div style="color: red" id="msgError">{{msgError}}</div>
+					<div style="color: red" id="msgError"></div>
 				</td>
 			</tr>
 			</tbody>
 		</table>
 	</div>
 </div>
-
-<script src="/javascripts/xuLy.js"></script>
